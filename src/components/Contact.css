@@ -1,0 +1,293 @@
+@font-face {
+  font-family: "JefithStamp";
+  src: url("../Fonts/Jefith-StampPersonalUse.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "StintUltra";
+  src: url("../Fonts/StintUltraCondensed-Regular.ttf") format("truetype");
+}
+
+/* Page container */
+.contact-page {
+  padding: 50px 80px;
+  min-height: 100vh;
+  background: none;
+}
+
+/* Page Heading */
+.contact-heading {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #FFFFFF;
+}
+
+.contact-heading .get {
+  font-family: "JefithStamp", sans-serif;
+}
+
+.contact-heading .touch {
+  font-family: "StintUltra", sans-serif;
+}
+
+/* Main content: two columns */
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Left Side */
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 20px;
+}
+
+.contact-info-heading {
+  font-family: "StintUltra", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.card-icon {
+  font-size: 2.2rem;
+  color: #00BFFF;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-family: "StintUltra", sans-serif;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+}
+
+.card-content p {
+  margin: 4px 0 0;
+  font-family: "StintUltra", sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+/* Right Side: Form */
+.contact-right {
+  flex: 1;
+  max-width: 50%;
+  min-width: 300px;
+  padding-left: 20px;
+}
+
+.form-heading {
+  font-family: "StintUltra", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 15px;
+  font-family: "StintUltra", sans-serif;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00BFFF;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  font-family: "StintUltra", sans-serif;
+  font-size: 1rem;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+  border-color: #000000;
+}
+
+/* Success message */
+.success-message {
+  margin-top: 15px;
+  color: #00BFFF;
+  font-family: "StintUltra", sans-serif;
+  font-size: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 0;
+  }
+
+  .contact-right {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .contact-heading {
+    font-size: 2.5rem;
+  }
+
+  .contact-info-heading,
+  .form-heading {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+
+  .contact-info-heading,
+  .form-heading {
+    font-size: 1.6rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+    margin-right: 12px;
+  }
+
+  .card-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .contact-form button {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 30px 20px;
+  }
+
+  .contact-heading {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .contact-content {
+    gap: 20px;
+  }
+
+  .contact-left,
+  .contact-right {
+    min-width: 100%;
+    padding: 0;
+  }
+
+  .contact-info-heading,
+  .form-heading {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .card-icon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-content p {
+    font-size: 0.85rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .contact-form button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  .success-message {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

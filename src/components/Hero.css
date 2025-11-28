@@ -1,0 +1,171 @@
+/* ===== Fonts ===== */
+@font-face {
+  font-family: 'JefithStamp';
+  src: url('../Fonts/Jefith-StampPersonalUse.otf') format('opentype');
+}
+@font-face {
+  font-family: 'StintUltraCondensed';
+  src: url('../Fonts/StintUltraCondensed-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TexGyreAdventor';
+  src: url('../Fonts/tex-gyre-adventor.bold.otf') format('opentype');
+  font-weight: bold;
+}
+
+/* ===== Hero container & desktop layout ===== */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;        
+  justify-content: space-between;
+  padding: 50px 50px 50px 20px; 
+  box-sizing: border-box;
+}
+
+/* Hero title */
+.hero-title {
+  font-size: 6rem;
+  line-height: 1.1;
+  color: white;
+  text-align: left;
+}
+
+.hero-title .jefith {
+  font-family: 'JefithStamp', sans-serif;
+}
+.hero-title .stint {
+  font-family: 'StintUltraCondensed', sans-serif;
+}
+
+/* Right-side content */
+.hero-right {
+  max-width: 500px;
+  text-align: left;
+  color: white;
+}
+
+.hero-description {
+  font-family: 'TexGyreAdventor', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: white;
+  letter-spacing: 0.4px;
+}
+
+.hero-quote {
+  font-family: 'JefithStamp', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+.hero-quote .punctuation {
+  font-family: Arial, sans-serif;
+}
+.hero-quote .stint-word {
+  font-family: 'StintUltraCondensed', sans-serif;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.collab-btn,
+.resume-btn-hero {
+  display: inline-block;
+  font-family: 'StintUltraCondensed', sans-serif;
+  font-size: 1rem;
+  color: white;
+  border: 1px solid white;
+  padding: 0.6rem 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.collab-btn {
+  background: transparent;
+}
+
+.resume-btn-hero {
+  background: #0c0c0c;
+}
+
+.collab-btn:hover,
+.resume-btn-hero:hover {
+  background: white;
+  color: black;
+}
+
+/* ===== MOBILE RESPONSIVE ONLY ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    justify-content: flex-end; /* push content to bottom */
+    align-items: flex-start;
+    height: 100vh; /* full viewport height */
+    padding: 20px; /* minimal padding */
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+
+  .hero-right {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-quote {
+    font-size: 1.4rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row; /* keep buttons inline */
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .collab-btn,
+  .resume-btn-hero {
+    font-size: 0.85rem; /* smaller buttons */
+    padding: 0.4rem 1rem;
+    width: auto; /* no full width */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 15px; /* minimal padding */
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-quote {
+    font-size: 1.3rem;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+  }
+
+  .collab-btn,
+  .resume-btn-hero {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.8rem;
+  }
+}

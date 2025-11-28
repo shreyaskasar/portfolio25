@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "JefithStamp";
+  src: url("../Fonts/Jefith-StampPersonalUse.otf");
+}
+
+@font-face {
+  font-family: "StintUltra";
+  src: url("../Fonts/StintUltraCondensed-Regular.ttf");
+}
+
+.personal-project-title {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding-left: 10%;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.personal-title {
+  font-family: "JefithStamp";
+  font-size: 3rem;
+  color: white;
+  margin-top: -6px;
+}
+
+.project-title {
+  font-family: "StintUltra";
+  font-size: 3.5rem;
+  color: white;
+  line-height: 1;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+/* Tablets / small laptops */
+@media (max-width: 1024px) {
+  .personal-project-title {
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 5%;
+  }
+
+  .personal-title {
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+
+  .project-title {
+    font-size: 3rem;
+  }
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+  .personal-project-title {
+    padding-left: 5%;
+  }
+
+  .personal-title {
+    font-size: 2.2rem;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+
+  /* Project card container */
+  .project-card {
+    max-width: 300px;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Project card text */
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .project-card .flex.items-center.gap-2 span {
+    font-size: 0.8rem;
+  }
+
+  .project-card a.bg-gray-800 {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .project-card a.text-white.text-2xl {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small devices / mobiles */
+@media (max-width: 480px) {
+  .personal-project-title {
+    padding-left: 3%;
+    gap: 2px;
+  }
+
+  .personal-title {
+    font-size: 1.8rem;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card p {
+    font-size: 0.8rem;
+  }
+
+  .project-card .flex.items-center.gap-2 span {
+    font-size: 0.7rem;
+  }
+
+  .project-card a.bg-gray-800 {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .project-card a.text-white.text-2xl {
+    font-size: 1.3rem;
+  }
+}

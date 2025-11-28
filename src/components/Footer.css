@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "JefithStamp";
+  src: url("/src/Fonts/Jefith-StampPersonalUse.otf") format("opentype");
+}
+
+/* Footer Links */
+.footer-links a {
+  font-family: "JefithStamp", sans-serif;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #9ca3af; /* Light gray on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer .max-w-6xl {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}

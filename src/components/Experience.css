@@ -1,0 +1,129 @@
+/* ===== FONTS ===== */
+@font-face {
+  font-family: "JefithStamp";
+  src: url("../Fonts/Jefith-StampPersonalUse.otf");
+}
+
+@font-face {
+  font-family: "StintUltra";
+  src: url("../Fonts/StintUltraCondensed-Regular.ttf");
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience-title {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding-left: 10%;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.personal-title {
+  font-family: "JefithStamp";
+  font-size: 3rem;
+  color: white;
+  margin-top: -6px;
+}
+
+.project-title {
+  font-family: "StintUltra";
+  font-size: 3.5rem;
+  color: white;
+  line-height: 1;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .experience-title {
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 5%;
+  }
+
+  .personal-title {
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+
+  .project-title {
+    font-size: 3rem;
+  }
+
+  /* Experience card adjustments */
+  .experience-cards > div {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-title {
+    padding-left: 5%;
+  }
+
+  .personal-title {
+    font-size: 2.2rem;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+
+  .experience-cards > div {
+    max-width: 100%;
+  }
+
+  /* Card padding and text size adjustments */
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .experience-card p {
+    font-size: 0.9rem;
+  }
+
+  .experience-card .tech span {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-title {
+    padding-left: 3%;
+    gap: 2px;
+  }
+
+  .personal-title {
+    font-size: 1.8rem;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .experience-cards > div {
+    max-width: 100%;
+  }
+
+  .experience-card {
+    padding: 0.8rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1rem;
+  }
+
+  .experience-card p {
+    font-size: 0.8rem;
+  }
+
+  .experience-card .tech span {
+    font-size: 0.65rem;
+  }
+}

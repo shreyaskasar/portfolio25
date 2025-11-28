@@ -1,0 +1,101 @@
+/* Import Jefith Stamp font for SHREYAS KASAR */
+@font-face {
+  font-family: 'JefithStamp';
+  src: url('../Fonts/Jefith-StampPersonalUse.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Import Stint Ultra Condensed font for Portfolio'25 */
+@font-face {
+  font-family: 'StintUltraCondensed';
+  src: url('../Fonts/StintUltraCondensed-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* LEFT NAV - Logo & Text */
+.leftnav {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  overflow: visible;
+  padding-left: 1rem;
+  padding-top: 1.5rem;
+}
+
+/* SHREYAS KASAR */
+.jefith-font {
+  font-family: 'JefithStamp', sans-serif;
+  color: white;
+  font-weight: normal;
+  line-height: 1.1;
+  font-size: 2.5vw;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.2em;
+}
+
+/* PORTFOLIO'25 */
+.stint-font {
+  font-family: 'StintUltraCondensed', sans-serif;
+  color: #bfdaeb; /* light cyan */
+  font-weight: normal;
+  line-height: 1;
+  font-size: 1.8vw;
+  display: inline-block;
+  margin-top: 0;
+}
+/* SOCIAL ICONS */
+.social-icons {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 1.5rem; /* spacing between icons */
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.social-icons a:hover {
+  color: #ccc;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .leftnav {
+    padding-left: 0.8rem;
+    padding-top: 1rem;
+  }
+
+  .jefith-font {
+    font-size: 5vw;
+  }
+
+  .stint-font {
+    font-size: 3.5vw;
+  }
+
+  /* Move social icons to right side vertically centered */
+  .social-icons {
+    left: auto;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 1.5rem; /* keep spacing same as desktop */
+  }
+}
+
+@media (max-width: 480px) {
+  .jefith-font {
+    font-size: 6vw;
+  }
+
+  .stint-font {
+    font-size: 4vw;
+  }
+
+  .social-icons {
+    gap: 1.5rem; /* keep spacing same */
+  }
+}

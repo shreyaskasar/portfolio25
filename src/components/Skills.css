@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "JefithStamp";
+  src: url("/src/Fonts/Jefith-StampPersonalUse.otf") format("opentype");
+}
+
+.skills-heading {
+  font-family: "JefithStamp", sans-serif;
+  font-size: 4rem;
+  color: white;
+  text-align: left;
+}
+
+.skills-container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.skills-container h2 {
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px; /* minimal space */
+  justify-items: center;
+  align-items: center;
+}
+
+.skill-card {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0; /* neutral square */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.skill-icon {
+  font-size: 40px;
+  color: #555; /* uniform dark color */
+}
+
+.skill-name {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ===== Adjust Skills Heading for Mobile ===== */
+@media (max-width: 768px) {
+  .skills-heading {
+    font-size: 3rem; /* slightly smaller on tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-heading {
+    font-size: 2.2rem; /* smaller on mobile */
+  }
+}
+
+
+/* ===== MOBILE RESPONSIVE ONLY ===== */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* wrap 3 per row */
+    gap: 12px; /* slightly smaller gap */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* wrap 2 per row */
+    gap: 10px;
+  }
+
+  .skill-card {
+    width: 90px;
+    height: 90px;
+  }
+
+  .skill-icon {
+    font-size: 35px;
+  }
+
+  .skill-name {
+    font-size: 12px;
+  }
+}
